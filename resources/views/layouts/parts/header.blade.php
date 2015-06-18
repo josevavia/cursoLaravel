@@ -1,0 +1,1 @@
+<div>LOGO en grande</div>
