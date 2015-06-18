@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace laravelsamples\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

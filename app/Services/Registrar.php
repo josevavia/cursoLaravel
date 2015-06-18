@@ -1,6 +1,6 @@
-<?php namespace App\Services;
+<?php namespace laravelsamples\Services;
 
-use App\User;
+use laravelsamples\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

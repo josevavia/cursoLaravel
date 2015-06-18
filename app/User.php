@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace laravelsamples;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

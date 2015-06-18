@@ -1,14 +1,17 @@
-<?php namespace App\Http\Controllers;
+<?php namespace laravelsamples\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use laravelsamples\Http\Requests;
+use laravelsamples\Http\Controllers\Controller;
 
-use App\User;
+use laravelsamples\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 class TestController extends Controller {
 
+    function __construct() {
+        $this->middleware('testmiddleware');
+    }
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -60,8 +63,10 @@ class TestController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit(Request $request, $id)
+	public function editar(Request $request, $id)
 	{
+        $this->middleware('testmiddleware');
+
 		echo "editando: ".$id.'<br/>';
 
         echo $request->input('id').'<br/>';

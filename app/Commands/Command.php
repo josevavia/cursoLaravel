@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace laravelsamples\Commands;
 
 abstract class Command {
 

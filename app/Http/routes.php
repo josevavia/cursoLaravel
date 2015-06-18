@@ -23,4 +23,4 @@ Route::controllers([
 Route::get('users', 'TestController@index');
 Route::get('users/pagina', 'TestController@index');
 
-Route::post('test/{id}', 'TestController@edit');
+Route::post('test/{id}', 'TestController@editar');

@@ -1,4 +1,4 @@
-<?php namespace App\Exceptions;
+<?php namespace laravelsamples\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
