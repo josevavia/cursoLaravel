@@ -95,7 +95,7 @@ return [
 	|
 	*/
 
-	'log' => 'daily',
+	'log' => 'single',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -145,6 +145,11 @@ return [
 		'laravelsamples\Providers\EventServiceProvider',
 		'laravelsamples\Providers\RouteServiceProvider',
 
+        Collective\Html\HtmlServiceProvider::class,
+
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+
+
 	],
 
 	/*
@@ -192,6 +197,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
 	],
 

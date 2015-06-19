@@ -24,3 +24,6 @@ Route::get('users', 'TestController@index');
 Route::get('users/pagina', 'TestController@index');
 
 Route::post('test/{id}', 'TestController@editar');
+
+Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact', ['as' => 'contact_send', 'uses' => 'ContactController@send']);
