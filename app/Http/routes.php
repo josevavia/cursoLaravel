@@ -27,3 +27,23 @@ Route::post('test/{id}', 'TestController@editar');
 
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact', ['as' => 'contact_send', 'uses' => 'ContactController@send']);
+
+Route::any('hash/{password}', function($password){
+    $hash_condificado = Hash::make($password);
+    echo 'Clave: '.$password.' --> '.$hash_condificado;
+
+    echo '<hr />';
+    if (Hash::check($password, $hash_condificado)) {
+
+        if (Hash::needsRehash($hash_condificado)) {
+            echo 'Es necesario';
+        } else {
+            echo 'No es necesario';
+        }
+
+        echo 'Iguales';
+    } else {
+        echo 'Distintos';
+    }
+
+});
