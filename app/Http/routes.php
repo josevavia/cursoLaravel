@@ -30,7 +30,7 @@ Route::post('contact', ['as' => 'contact_send', 'uses' => 'ContactController@sen
 
 Route::any('hash/{password}', function($password){
     $hash_condificado = Hash::make($password);
-    echo 'Clave: '.$password.' --> '.$hash_condificado;
+    echo trans('miidioma.clave', ['clave' => $password, 'hash' => $hash_condificado]);
 
     echo '<hr />';
     if (Hash::check($password, $hash_condificado)) {
@@ -46,4 +46,12 @@ Route::any('hash/{password}', function($password){
         echo 'Distintos';
     }
 
+});
+
+Route::get('asociativo', function(){
+    $collection = collect([['name' => 'Carlos', 'ape' => 'Ruiz'], ['nombre' => 'Miguel']]);
+
+    $a = $collection->collapse();
+
+    dd($a);
 });

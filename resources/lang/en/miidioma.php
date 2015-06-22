@@ -15,5 +15,6 @@ return [
 
 	'prueba' => 'Traducción de mi prueba',
 	'prueba2' => 'Otra traducción',
+    'clave' => 'La clave :clave y hasheada :hash',
 
 ];
